@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root { --cream: #f5f0e8; --brown: #24211f; --terracotta: #9d604b; --amber: #e2c08a; --amber-deep: #ad7c3c; --muted: #796f69; --line: rgba(44,39,37,.16); --line-soft: rgba(226,192,138,.35); --font-body: 'DM Sans', sans-serif; --font-display: 'DM Serif Display', Georgia, serif; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--brown); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+a, button { -webkit-tap-highlight-color: transparent; }
+button, input, textarea { font: inherit; }
+::selection { background: var(--amber); color: var(--brown); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

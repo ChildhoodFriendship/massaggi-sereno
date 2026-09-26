@@ -1,0 +1,7 @@
+:host { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.flow-line { position: absolute; inset: 12rem 5vw 8rem auto; width: clamp(2rem, 6vw, 5rem); opacity: .85; }
+svg { width: 100%; height: 100%; overflow: visible; }
+.flow-line__track, .flow-line__progress { fill: none; stroke: var(--line-soft); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.flow-line__progress { stroke: var(--amber); stroke-width: 2.5; stroke-dasharray: 1050; stroke-dashoffset: calc(1050px * (1 - var(--flow-progress))); transition: stroke-dashoffset .12s linear; }
+@media (max-width: 720px) { .flow-line { inset: 8rem 1rem 5rem auto; opacity: .45; } }
+@media (prefers-reduced-motion: reduce) { .flow-line__progress { transition: none; } }
