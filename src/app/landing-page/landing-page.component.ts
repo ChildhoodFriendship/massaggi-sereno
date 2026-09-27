@@ -25,7 +25,7 @@ export class LandingPageComponent implements AfterViewInit, OnDestroy {
         gsap.from(element, { y: 55, opacity: 0, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: element, start: 'top 82%' } });
       });
       gsap.utils.toArray<HTMLElement>('.horizontal-track').forEach((track) => {
-        gsap.to(track, { xPercent: -28, ease: 'none', scrollTrigger: { trigger: track, start: 'top bottom', end: 'bottom top', scrub: 1.3 } });
+        gsap.to(track, { xPercent: -20, ease: 'none', scrollTrigger: { trigger: track, start: 'top bottom', end: 'bottom top', scrub: 1.3 } });
       });
       gsap.utils.toArray<HTMLElement>('.image-reveal').forEach((image) => {
         gsap.from(image, { clipPath: 'inset(0 100% 0 0)', scale: 1.12, duration: 1.2, ease: 'power4.inOut', scrollTrigger: { trigger: image, start: 'top 75%' } });

@@ -17,6 +17,7 @@
 - [x] Reworked the landing page into a scroll-led editorial experience with a stronger modern visual system.
 - [x] Added GSAP and ScrollTrigger as lazy browser-only animation chunks for hero reveals, parallax, image reveals, and horizontal treatment movement.
 - [x] Added responsive image-led sections, marquee typography, highlighted treatment panels, and reduced-motion fallback.
+- [x] Revised the public copy for Padova, removed decorative section numbering, clarified the hero and statement, and added native horizontal treatment scrolling with pointer dragging.
 - [ ] Replace Unsplash placeholders and illustrative copy with approved studio photography and final client content.
 
 - [ ] Replace placeholders with Davide's approved biography, portrait, reviews, prices, and contact details.

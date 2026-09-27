@@ -1,6 +1,8 @@
 .treatments { overflow: hidden; }
-.treatment-grid { display: flex; gap: 1rem; width: max-content; margin-top: 3rem; }
+.treatment-grid { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-color: var(--terracotta) transparent; scrollbar-width: thin; cursor: grab; margin-top: 3rem; padding-bottom: .75rem; touch-action: pan-y; }
+.treatment-grid:active { cursor: grabbing; }
+.treatment-grid__track { display: flex; gap: 1rem; width: max-content; }
 .treatment-card { width: clamp(16rem, 28vw, 22rem); min-height: 15rem; border: 1px solid var(--line); border-radius: 1rem; transition: background .35s ease, transform .35s ease, border-color .35s ease; }
 .treatment-card:hover, .treatment-card.is-open { background: var(--amber); border-color: var(--amber); transform: translateY(-8px); }
 .treatment-card button { width: 100%; min-height: 15rem; display: grid; grid-template-rows: auto 1fr auto; gap: 1rem; text-align: left; align-items: start; border: 0; background: transparent; color: inherit; padding: 1.5rem; cursor: pointer; }
-.treatment-card__number { color: var(--terracotta); font-size: .72rem; }.treatment-card strong { display: block; font: 500 1.55rem/1.05 var(--font-display); }.treatment-card small { display: block; color: var(--muted); margin-top: .45rem; font-size: .72rem; }.treatment-card__icon { justify-self: end; font-size: 1.6rem; font-weight: 300; }.treatment-card__detail { color: var(--brown); padding: 0 1.5rem 1.5rem; margin: -4rem 0 0; font-size: .82rem; }
+.treatment-card strong { display: block; font: 500 1.55rem/1.05 var(--font-display); }.treatment-card small { display: block; color: var(--muted); margin-top: .45rem; font-size: .72rem; }.treatment-card__icon { justify-self: end; font-size: 1.6rem; font-weight: 300; }.treatment-card__detail { color: var(--brown); padding: 0 1.5rem 1.5rem; margin: -4rem 0 0; font-size: .82rem; }

@@ -17,5 +17,36 @@ export class TreatmentsComponent {
     { name: 'Olistico', duration: '75 min', price: 'da definire', description: 'Un ascolto completo che integra corpo, respiro e presenza.' },
   ];
   readonly expanded = signal<number | null>(null);
+  private dragStart = 0;
+  private scrollStart = 0;
+  private pointerId: number | null = null;
+  private dragging = false;
+
   toggle(index: number): void { this.expanded.update(current => current === index ? null : index); }
+
+  startDrag(event: PointerEvent, container: HTMLElement): void {
+    this.dragStart = event.clientX;
+    this.scrollStart = container.scrollLeft;
+    this.pointerId = event.pointerId;
+    this.dragging = false;
+    container.setPointerCapture(event.pointerId);
+  }
+
+  drag(event: PointerEvent, container: HTMLElement): void {
+    if (!container.hasPointerCapture(event.pointerId)) return;
+    const distance = event.clientX - this.dragStart;
+    if (Math.abs(distance) > 4) this.dragging = true;
+    if (this.dragging) {
+      container.scrollLeft = this.scrollStart - distance;
+      event.preventDefault();
+    }
+  }
+
+  stopDrag(container: HTMLElement): void {
+    if (this.pointerId !== null && container.hasPointerCapture(this.pointerId)) {
+      container.releasePointerCapture(this.pointerId);
+    }
+    this.pointerId = null;
+    this.dragging = false;
+  }
 }

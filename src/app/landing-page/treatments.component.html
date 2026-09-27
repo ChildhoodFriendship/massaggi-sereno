@@ -1,11 +1,13 @@
 <section class="section treatments" id="trattamenti" aria-labelledby="treatments-title">
-  <div class="section-index">02 <span>/</span> il tuo ritmo</div><div class="section-heading reveal"><p class="eyebrow">Il tempo per te</p><h2 id="treatments-title">Trattamenti<br /><em>che ascoltano.</em></h2><p>Scegliamo insieme il ritmo e l'intensità più adatti a come ti senti oggi.</p></div>
-  <div class="treatment-grid horizontal-track">
+  <div class="section-index">il tuo ritmo</div><div class="section-heading reveal"><p class="eyebrow">Il tempo per te</p><h2 id="treatments-title">Trattamenti<br /><em>pensati per te.</em></h2><p>Scegliamo insieme il ritmo e l'intensità più adatti a come ti senti oggi.</p></div>
+  <div class="treatment-grid" #treatmentGrid (pointerdown)="startDrag($event, treatmentGrid)" (pointermove)="drag($event, treatmentGrid)" (pointerup)="stopDrag(treatmentGrid)" (pointercancel)="stopDrag(treatmentGrid)">
+    <div class="treatment-grid__track horizontal-track">
     @for (treatment of treatments; track treatment.name; let i = $index) {
       <article class="treatment-card" [class.is-open]="expanded() === i">
-        <button type="button" [attr.aria-expanded]="expanded() === i" (click)="toggle(i)"><span class="treatment-card__number">0{{ i + 1 }}</span><span><strong>{{ treatment.name }}</strong><small>{{ treatment.duration }} · {{ treatment.price }}</small></span><span class="treatment-card__icon" aria-hidden="true">{{ expanded() === i ? '−' : '+' }}</span></button>
+        <button type="button" [attr.aria-expanded]="expanded() === i" (click)="toggle(i)"><span><strong>{{ treatment.name }}</strong><small>{{ treatment.duration }} · {{ treatment.price }}</small></span><span class="treatment-card__icon" aria-hidden="true">{{ expanded() === i ? '−' : '+' }}</span></button>
         @if (expanded() === i) { <p class="treatment-card__detail">{{ treatment.description }}</p> }
       </article>
     }
+    </div>
   </div>
 </section>
