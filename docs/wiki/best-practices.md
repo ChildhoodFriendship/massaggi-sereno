@@ -1,9 +1,26 @@
-# Best practices
+---
+title: Sereno best practices
+created: 2026-09-28
+updated: 2026-09-28
+type: guidance
+tags: [guidance, architecture, performance, testing, documentation]
+project: massaggi-sereno
+status: active
+confidence: high
+sources: [Agents.md, angular.json, package.json, src/app, src/styles.css]
+---
 
-- Build the landing page from focused Angular standalone components; keep the root component responsible only for composition/routing.
-- Use strict TypeScript, typed readonly data, Signals for local interactive state, and Angular control flow (`@if`, `@for`).
-- Keep browser-only APIs behind platform checks so the SSR and hydration paths remain safe.
-- Prefer native CSS transitions, SVG, `requestAnimationFrame`, and browser scroll APIs before adding animation dependencies.
-- Centralize Sereno design tokens in `src/styles.css`; keep component CSS scoped to layout and component behavior.
-- Treat contact/booking links as configuration placeholders until Davide supplies real details. Never ship secrets or personal credentials.
-- Check keyboard focus, semantic headings, reduced-motion preferences, mobile layout, `npm run build`, and `npm run test` before declaring a milestone complete.
+# Best practice
+
+- Costruisci la landing con componenti Angular standalone focalizzati; il root component deve restare composizione/routing.
+- Usa TypeScript strict, dati readonly typed, Signals per stato UI locale, `OnPush` e controllo moderno `@if`/`@for`.
+- Mantieni le API browser dietro guard SSR e lifecycle cleanup.
+- Usa CSS/SVG/RAF/browser APIs prima di aggiungere dipendenze; GSAP è presente perché il progetto richiede animazioni scroll-led e viene caricato lazy.
+- Centralizza token Sereno in `src/styles.css`; mantieni gli stili di sezione nei CSS component.
+- Usa semantic headings, focus visibile, responsive breakpoints, reduced-motion fallback e dimensioni stabili per le immagini.
+- Tratta contatto, booking, prezzi, ritratti, recensioni e WhatsApp come placeholder finché il proprietario non fornisce valori approvati.
+- Un form pubblico non deve inviare dati finché endpoint/provider non è configurato e verificato.
+- Aggiorna la wiki nello stesso cambiamento dopo una feature, refactor, decisione architetturale o milestone significativa.
+- Esegui test e build reali prima di dichiarare concluso un task; non confondere build SSR con browser visual QA.
+
+Pagine correlate: [[agent-guide.md|guida agenti]], [[boundaries.md|confini]], [[current-status.md|stato]] e [[runbooks/local-development.md|runbook]].
