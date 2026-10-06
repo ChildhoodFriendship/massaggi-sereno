@@ -1,18 +1,18 @@
 # Sereno Studio — agent boundaries
 
-Questo workspace segue come fonte di riferimento `docs/wiki/`.
+Questo workspace segue come fonte di riferimento `doc/wiki/`.
 
 ## Orientamento obbligatorio
 
 Prima di modificare codice o architettura:
 
-1. leggi `docs/wiki/SCHEMA.md`;
-2. leggi `docs/wiki/index.md`;
-3. leggi `docs/wiki/current-status.md`;
-4. leggi le ultime 20–30 righe di `docs/wiki/log.md`;
+1. leggi `doc/wiki/SCHEMA.md`;
+2. leggi `doc/wiki/index.md`;
+3. leggi `doc/wiki/current-status.md`;
+4. leggi le ultime 20–30 righe di `doc/wiki/log.md`;
 5. consulta poi la pagina di progetto, architettura, modulo o runbook pertinente.
 
-La wiki corrente deve restare distinta da `docs/wiki_other_project/`, che è soltanto una fonte di riferimento strutturale e non una fonte di fatti sul progetto Sereno.
+La wiki corrente deve restare distinta da eventuali cartelle wiki di esempio o di altri progetti, che sono soltanto fonti di riferimento strutturale e non fonti di fatti sul progetto Sereno.
 
 ## Regole operative
 
@@ -23,7 +23,7 @@ La wiki corrente deve restare distinta da `docs/wiki_other_project/`, che è sol
 - Non inserire segreti, token, password, dati personali o endpoint privati nella wiki o nel codice.
 - Per animazioni browser/scroll proteggi `window`, `document`, RAF e GSAP con guard SSR e cleanup.
 - Considera il form, WhatsApp, immagini, recensioni, prezzi e contenuti cliente come placeholder finché non risultano approvati e verificati.
-- Dopo ogni cambiamento sostanziale aggiorna la pagina wiki pertinente, `index.md` e `log.md`, includendo evidenze e livello di confidence.
+- Dopo ogni cambiamento sostanziale aggiorna la pagina wiki pertinente in `doc/wiki/`, `index.md` e `log.md`, includendo evidenze e livello di confidence.
 
 ## Gate di verifica
 
@@ -35,4 +35,4 @@ Esegui i comandi realmente disponibili e riporta il risultato effettivo:
 
 Il build SSR/prerender non sostituisce il controllo visuale desktop/mobile o la verifica di provider e asset remoti.
 
-La documentazione dettagliata e i template sono in `docs/wiki/README.md`, `docs/wiki/agent-guide.md` e `docs/wiki/runbooks/local-development.md`.
+La documentazione operativa è in `doc/wiki/SCHEMA.md`, `doc/wiki/agent-guide.md` e `doc/wiki/current-status.md`.

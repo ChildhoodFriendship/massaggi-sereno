@@ -1,0 +1,3 @@
+# Keep durable wiki pages tracked; ignore only local exports.
+*.local.md
+*.tmp

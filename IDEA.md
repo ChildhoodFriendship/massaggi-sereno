@@ -1,6 +1,6 @@
 Inizializzazione & Regole (Agents.md & Wiki):
 
-    Hermes deve creare il file Agents.md nella root del progetto che punta rigorosamente alla cartella docs/wiki/ (best-practices.md, boundaries.md, milestones.md).
+    Hermes deve creare il file Agents.md nella root del progetto che punta rigorosamente alla cartella doc/wiki/ (SCHEMA.md, agent-guide.md, current-status.md).
 
     Prima di scrivere codice, deve leggere la wiki e aggiornarla a fine task.
 
